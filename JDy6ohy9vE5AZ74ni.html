@@ -1,0 +1,272 @@
+<html><head><base href="." name="theme" content="light"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>GLUBO - Gaming Innovation Since 1973</title><style>
+:root {
+  --primary: #4a148c;
+  --accent: #00b0ff;
+  --text: #333;
+  --light: #f5f5f5;
+  --neon-glow: 0 0 10px rgba(0, 176, 255, 0.5);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  line-height: 1.6;
+  background: #fafafa;
+}
+
+.header {
+  background: var(--primary);
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  max-width: 200px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080"><rect width="100%" height="100%" fill="%234a148c"/><path d="M0 0l1920 1080M1920 0L0 1080" stroke="%236a1b9a" stroke-width="2"/></svg>');
+  background-size: cover;
+  color: white;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: var(--neon-glow);
+}
+
+.content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--primary);
+  box-shadow: var(--neon-glow);
+}
+
+.timeline-item {
+  margin: 2rem 0;
+  position: relative;
+  width: 50%;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  transform: translateX(-30px);
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  transform: translateX(30px);
+}
+
+.product-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.motto {
+  background: var(--primary);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: var(--neon-glow);
+}
+
+.globob-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+</style></head><body>
+
+<header class="header">
+  <img src="Glubo_Logo.webp" alt="GLUBO Logo" class="logo">
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>GLUBO</h1>
+    <p>Innovating Gaming Since 1973</p>
+    <p class="motto">"WODU TO SHIEXLS"</p>
+  </div>
+</section>
+
+<main class="content">
+  <section class="globob-container">
+    <div class="globob-image">
+      <svg width="300" height="300" viewBox="0 0 300 300">
+        <rect x="50" y="50" width="200" height="150" fill="#4a148c" rx="10"/>
+        <rect x="70" y="70" width="160" height="90" fill="#00b0ff"/>
+        <circle cx="150" cy="200" r="10" fill="#fff"/>
+        <text x="150" y="100" text-anchor="middle" fill="white" font-size="24">GLOBOB</text>
+        <text x="150" y="130" text-anchor="middle" fill="white" font-size="12">70KB ROM</text>
+      </svg>
+    </div>
+    <div class="globob-info">
+      <h2>The Revolutionary Globob</h2>
+      <p>Released in 1987, the Globob featured an impressive 70 kilobytes of ROM, surpassing Nintendo's NES capabilities and marking GLUBO's successful entry into the gaming industry.</p>
+    </div>
+  </section>
+
+  <section class="timeline">
+    <div class="timeline-item">
+      <h3>1973</h3>
+      <p>GLUBO founded in San Francisco, CA, initially focusing on children's toys</p>
+    </div>
+    <div class="timeline-item">
+      <h3>1987</h3>
+      <p>Launch of the Globob computer system</p>
+    </div>
+    <div class="timeline-item">
+      <h3>1990s</h3>
+      <p>Release of hit titles including Blario Sisters</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Present Day</h3>
+      <p>Leading gaming and software company</p>
+    </div>
+  </section>
+
+  <section class="product-showcase">
+    <div class="product-card">
+      <img src="Blario_Sisters_Nurse_Minigame.webp" alt="Blario Sisters" style="width: 200px; height: auto; margin-bottom: 1rem;">
+      <h3>Gaming Division</h3>
+      <p>Creator of beloved titles like Blario Sisters</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2024 GLUBO, Inc. All rights reserved.</p>
+  <p>Headquarters: San Francisco, CA</p>
+  <div class="footer-links">
+    <a href="https://glubo.com/about">About</a> |
+    <a href="https://glubo.com/games">Games</a> |
+    <a href="https://glubo.com/contact">Contact</a>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const timeline = document.querySelectorAll('.timeline-item');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateX(0)';
+      }
+    });
+  });
+
+  timeline.forEach(item => {
+    observer.observe(item);
+  });
+});
+</script>
+
+</body></html>
